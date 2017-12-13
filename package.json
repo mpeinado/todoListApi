@@ -1,0 +1,21 @@
+{
+  "name": "todo-list-api",
+  "version": "1.0.0",
+  "description": "My first NodeJs API project",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "\"echo \\\"Error: no test specified\\\" && exit 1\""
+  },
+  "keywords": [
+    "RESTful"
+  ],
+  "author": "marco.peinado",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.5"
+  }
+}
