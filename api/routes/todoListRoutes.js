@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = function(app){
-    var todoList = require('../controllers/todoListController');
+    var todoList = require('../models/todoListModel');
 
     /**
      * @swagger
@@ -122,8 +122,4 @@ module.exports = function(app){
      */
     app.route('/api/addItem/:userID/itemName/:itemName')
         .post(todoList.updateItem);
-
-    
-    
-
 };
