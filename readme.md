@@ -5,10 +5,11 @@ http://localhost:3000/api/todo
 http://localhost:3000/api-docs/#/Todo/get_api_todo
 
 @TODO 
++ Clean up the code - controllers, models
+    Cleaner way to define Swagger Spec (maybe look at MD)
 + API Endpoints 
-    Edit 
-    Delete/Deactivate
-+ Cleaner way to define Swagger Spec (maybe look at MD)
+    X Edit 
+    Delete/Deactivate - NO delete, Need to add logic to PROC to deactivate if status compleated
 + Express
 + nodemon 
 + FaceBook/Twitter login

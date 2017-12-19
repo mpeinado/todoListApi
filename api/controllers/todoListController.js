@@ -39,8 +39,11 @@ exports.get_item = function(req, res){
 
 exports.updateItem = function(req, res){
     // userID int, itemID int, statusID int, itemName
-    var dbQuery = "CALL `todo_list`.`update_item`(" + req.params.userID + ", " + req.params.itemID + 
-        ", " + req.params.statusID +  ", '"  + req.params.itemName + "')";
+    var itemID = req.params.itemID ? req.params.itemID :  null;
+    var statusID = req.params.statusID ? req.params.statusID :  null;
+
+    var dbQuery = "CALL `todo_list`.`update_item`(" + req.params.userID + ", " + itemID + 
+        ", " + statusID +  ", '"  + req.params.itemName + "')";
 
     db.query(dbQuery, function (error, results, fields) {
         if(error){

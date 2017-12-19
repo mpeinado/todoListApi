@@ -98,6 +98,31 @@ module.exports = function(app){
     app.route('/api/editItem/:userID/item/:itemID/status/:statusID/itemName/:itemName')
         .put(todoList.updateItem);
 
+    /**
+     * @swagger
+     * /api/addItem/{userID}/itemName/{itemName}:
+     *   post:
+     *     tags:
+     *       - Edit Item
+     *     parameters:
+     *      - in: path
+     *        name: userID
+     *        type: integer 
+     *      - in: path
+     *        name: itemName
+     *        type: string       
+     *     description: Edit a todo item
+     *     produces:
+     *       - application/json
+     *     responses:
+     *       200:
+     *         description: An array of todo items
+     *         schema:
+     *           $ref: '#/definitions/TodoItem'
+     */
+    app.route('/api/addItem/:userID/itemName/:itemName')
+        .post(todoList.updateItem);
+
     
     
 
