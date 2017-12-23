@@ -5,21 +5,6 @@ module.exports = function(app){
 
     /**
      * @swagger
-     * definitions:
-     *   TodoItem:
-     *     properties:
-     *       name:
-     *         type: string
-     *       status:
-     *         type: string
-     *       itemID:
-     *         type: integer
-     *       createdDate:
-     *         type: string
-     */
-
-    /**
-     * @swagger
      * /api/todo/{userID}:
      *   get:
      *     tags:
@@ -35,7 +20,7 @@ module.exports = function(app){
      *       200:
      *         description: An array of todo items
      *         schema:
-     *           $ref: '#/definitions/TodoItem'
+     *           $ref: '#/definitions/item'
      */
     app.route('/api/todo/:userID')
         .get(todoList.list_all_tasks);
@@ -62,7 +47,7 @@ module.exports = function(app){
      *       200:
      *         description: An array of todo items
      *         schema:
-     *           $ref: '#/definitions/TodoItem'
+     *           $ref: '#/definitions/item'
      */
     app.route('/api/todo/:userID/item/:itemID')
         .get(todoList.get_item);
@@ -93,7 +78,7 @@ module.exports = function(app){
      *       200:
      *         description: An array of todo items
      *         schema:
-     *           $ref: '#/definitions/TodoItem'
+     *           $ref: '#/definitions/item'
      */
     app.route('/api/editItem/:userID/item/:itemID/status/:statusID/itemName/:itemName')
         .put(todoList.updateItem);
@@ -118,7 +103,7 @@ module.exports = function(app){
      *       200:
      *         description: An array of todo items
      *         schema:
-     *           $ref: '#/definitions/TodoItem'
+     *           $ref: '#/definitions/item'
      */
     app.route('/api/addItem/:userID/itemName/:itemName')
         .post(todoList.updateItem);

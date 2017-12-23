@@ -1,5 +1,5 @@
 'use strict';
-var db = require('../../db.js');
+//var db = require('../../db.js');
 
 exports.list_all_tasks = function(req, res){
     var dbQuery = "CALL `todo_list`.`get_todoItems`(" + req.params.userID + ")";

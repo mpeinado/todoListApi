@@ -1,0 +1,11 @@
+definitions:
+  item:
+    properties:
+      name:
+        Type: string
+      status:
+        type: string
+      itemID:
+        type: integer
+      createdDate:
+        type: string
