@@ -64,9 +64,16 @@ Swagger
     http://localhost:3000/swagger.json
     http://localhost:3000/api-docs/#/Todo/get_api_todo
 
-    http://mherman.org/blog/2016/05/26/swagger-and-nodejs/#.WjWk9t_OBhE
+    https://apihandyman.io/writing-openapi-swagger-specification-tutorial-part-8-splitting-specification-file/
 
-    https://swagger.io/specification/#parameterObject
+    http://mherman.org/blog/2016/05/26/swagger-and-nodejs/#.WjWk9t_OBhE
+        Main tutorial I followed to setup Swagger
+        https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md
+        https://swagger.io/docs/specification/using-ref/
+        https://swagger.io/docs/specification/2-0/basic-structure/
 
     Add /public folder as a route to be able to access Swagger UI
     https://stackoverflow.com/questions/41291382/how-to-access-files-in-my-public-folder-in-node-js-express
+
+    https://github.com/swagger-api/swagger-node
+        Maybe this is the way I should go 

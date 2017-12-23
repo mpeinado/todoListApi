@@ -33,8 +33,9 @@ exports.get_item = function(req, res){
             //res.json(JSON.stringify({"status": 200, "error": null, "response": results}));
             res.json(results[0]);
             //If there is no error, all is good and response is 200OK.
-        }
+        }    
     });
+    //res.json({'foo': 1});
 };
 
 exports.updateItem = function(req, res){
