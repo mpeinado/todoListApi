@@ -1,6 +1,8 @@
 paths:
   /api/todo/{userID}:
     get:
+      tags:
+        - Todo API
       summary: Returns all todo items for a user
       parameters:
         - in: path
@@ -16,6 +18,8 @@ paths:
 
   /api/todo/{userID}/item/{itemID}:
     get:
+      tags:
+        - Todo API
       summary: Returns an item for a user.
       parameters:
         - in: path
@@ -35,6 +39,8 @@ paths:
 
   /api/editItem/{userID}/item/{itemID}/status/{statusID}/itemName/{itemName}:
     put:
+      tags:
+        - Todo API
       summary: Edit a todo item
       parameters:
         - in: path
@@ -62,6 +68,8 @@ paths:
 
   /api/addItem/{userID}/itemName/{itemName}:
     post:
+      tags:
+        - Todo API
       summary: Create a todo item.
       parameters:
         - in: path
