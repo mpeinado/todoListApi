@@ -23,7 +23,7 @@ var options = {
 // import swaggerDefinitions
 swaggerDefinition: swaggerDefinition,
 // path to the API docs
-apis: ['./api/routes/*.js', './api/definitions/*.yaml', './api/paths/*.yaml'],
+apis: ['./api/controllers/*.js', './api/definitions/*.yaml', './api/routes/*.yaml'],
 };
 
 // initialize swagger-jsdoc
@@ -40,7 +40,7 @@ app.get('/swagger.json', function(req, res) {
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-var routes = require('./api/routes/todoListRoutes');
+var routes = require('./api/controllers/todoListRoutes');
 routes(app);
 
 
